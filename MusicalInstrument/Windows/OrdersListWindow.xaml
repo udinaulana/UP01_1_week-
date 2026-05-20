@@ -1,0 +1,99 @@
+﻿<Window x:Class="MusicalInstrument.Windows.OrdersListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicalInstrument.Windows"
+        xmlns:convert="clr-namespace:MusicalInstrument.Converters"
+        mc:Ignorable="d"
+        Title="Управление заказами" Height="600" Width="1100"
+        WindowStartupLocation="CenterOwner"
+        Background="#F8F8FF"
+        FontFamily="Times New Roman">
+
+    <Window.Resources>
+        <convert:OrderTotalConverter x:Key="OrderTotalConverter"/>
+        <convert:DiscountPrice x:Key="DiscountPrice"/>
+
+        <Style x:Key="ActionButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#9400D3"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="6" Padding="10,5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <Border Grid.Row="0" Background="#483D8B">
+            <TextBlock Text="Управление заказами" FontSize="24" FontWeight="Bold" Foreground="White" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Border>
+
+        <!-- Панель сортировки -->
+        <Border Grid.Row="1" Background="#F0F0FF" BorderBrush="#483D8B" BorderThickness="0,0,0,1">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <StackPanel Margin="15,5">
+                    <TextBlock Text="Сортировка по сумме" FontSize="14" FontWeight="Bold" Foreground="#483D8B" HorizontalAlignment="Center"/>
+                    <ComboBox Name="sortBox" Width="200" Height="30" FontSize="14" SelectionChanged="sortBox_SelectionChanged">
+                        <ComboBoxItem>Без сортировки</ComboBoxItem>
+                        <ComboBoxItem>По возрастанию</ComboBoxItem>
+                        <ComboBoxItem>По убыванию</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Список заказов -->
+        <DataGrid Grid.Row="2" Name="OrdersGrid" AutoGenerateColumns="False" Margin="10" Background="White" 
+                  SelectionChanged="OrdersGrid_SelectionChanged" IsReadOnly="True"
+                  RowHeaderWidth="0" AlternatingRowBackground="#F5F5F5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№ заказа" Binding="{Binding IdOrder}" Width="70"/>
+                <DataGridTextColumn Header="Код заказа" Binding="{Binding CodeOrder}" Width="100"/>
+                <DataGridTextColumn Header="Дата заказа" Binding="{Binding DateOrder, StringFormat=dd.MM.yyyy}" Width="100"/>
+                <DataGridTextColumn Header="ФИО клиента" Width="150">
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat="{}{0} {1} {2}">
+                            <Binding Path="PrkUsers.Surname"/>
+                            <Binding Path="PrkUsers.Name"/>
+                            <Binding Path="PrkUsers.Patronymic"/>
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Статус" Binding="{Binding PrkOrderStatuses.OrderStatus}" Width="100"/>
+                <DataGridTextColumn Header="Сумма, руб." Binding="{Binding Converter={StaticResource OrderTotalConverter}}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Нижняя панель с кнопками -->
+        <Border Grid.Row="3" Background="#483D8B" Padding="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Name="orderDetailsButton" Content="Детали заказа" Width="180"
+                        Style="{StaticResource ActionButtonStyle}" Click="OrderDetailsButton_Click"/>
+                <Button Name="editProductButton" Content="Редактировать товары" Width="180"
+                        Style="{StaticResource ActionButtonStyle}" Background="#B8860B" Click="EditProductButton_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

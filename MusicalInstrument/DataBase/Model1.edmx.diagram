@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="95828b0cbc8b464c863184ff2e5e2d85" Name="Diagram1">
+        <EntityTypeShape EntityType="user36124Model.PrkCategotyOrders" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkManufacturers" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkOrderDetails" Width="1.5" PointX="5.25" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkOrders" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkOrderStatuses" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkPickUpPoints" Width="1.5" PointX="0.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkRoles" Width="1.5" PointX="1.5" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkSuppliers" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkUsers" Width="1.5" PointX="0.75" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrkUunitOfMeasurements" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="user36124Model.PrlProducts" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="user36124Model.FK_PrlProducts_PrkCategotyOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrlProducts_PrkManufacturers" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrkOrderDetails_PrkOrders" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrkOrderDetails_PrlProducts" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrkOrders_PrkOrderStatuses" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrkOrders_PrkPickUpPoints" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrkOrders_PrkUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrkUsers_PrkRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrlProducts_PrkSuppliers" ManuallyRouted="false" />
+        <AssociationConnector Association="user36124Model.FK_PrlProducts_PrkUunitOfMeasurements" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

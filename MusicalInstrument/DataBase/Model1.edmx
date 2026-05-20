@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище user36124Model" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PrkCategotyOrders">
+          <Key>
+            <PropertyRef Name="IdCategotyOrder" />
+          </Key>
+          <Property Name="IdCategotyOrder" Type="int" Nullable="false" />
+          <Property Name="CategotyOrder" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkManufacturers">
+          <Key>
+            <PropertyRef Name="IdManufacturer" />
+          </Key>
+          <Property Name="IdManufacturer" Type="int" Nullable="false" />
+          <Property Name="Manufacturer" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkOrderDetails">
+          <Key>
+            <PropertyRef Name="IdOrderDetail" />
+          </Key>
+          <Property Name="IdOrderDetail" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdProduct" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="IdOrder" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkOrders">
+          <Key>
+            <PropertyRef Name="IdOrder" />
+          </Key>
+          <Property Name="IdOrder" Type="int" Nullable="false" />
+          <Property Name="IdPickUpPoint" Type="int" Nullable="false" />
+          <Property Name="IdUser" Type="int" Nullable="false" />
+          <Property Name="IdOrderStatus" Type="int" Nullable="false" />
+          <Property Name="DateOrder" Type="date" Nullable="false" />
+          <Property Name="DateDelivery" Type="date" Nullable="false" />
+          <Property Name="CodeOrder" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkOrderStatuses">
+          <Key>
+            <PropertyRef Name="IdOrderStatus" />
+          </Key>
+          <Property Name="IdOrderStatus" Type="int" Nullable="false" />
+          <Property Name="OrderStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkPickUpPoints">
+          <Key>
+            <PropertyRef Name="IdPickUpPoint" />
+          </Key>
+          <Property Name="IdPickUpPoint" Type="int" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="City" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Street" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Home" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkRoles">
+          <Key>
+            <PropertyRef Name="IdRole" />
+          </Key>
+          <Property Name="IdRole" Type="int" Nullable="false" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkSuppliers">
+          <Key>
+            <PropertyRef Name="IdSupplier" />
+          </Key>
+          <Property Name="IdSupplier" Type="int" Nullable="false" />
+          <Property Name="Supplier" Type="nvarchar" MaxLength="80" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkUsers">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="int" Nullable="false" />
+          <Property Name="IdRole" Type="int" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
+          <Property Name="Login" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrkUunitOfMeasurements">
+          <Key>
+            <PropertyRef Name="IdUnitOfMeasurement" />
+          </Key>
+          <Property Name="IdUnitOfMeasurement" Type="int" Nullable="false" />
+          <Property Name="UnitOfMeasurement" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PrlProducts">
+          <Key>
+            <PropertyRef Name="IdProduct" />
+          </Key>
+          <Property Name="IdProduct" Type="int" Nullable="false" />
+          <Property Name="IdUnitOfMeasurements" Type="int" Nullable="false" />
+          <Property Name="IdSupplier" Type="int" Nullable="false" />
+          <Property Name="IdManufacturer" Type="int" Nullable="false" />
+          <Property Name="IdCategotyOrder" Type="int" Nullable="false" />
+          <Property Name="Article" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NameOrder" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Price" Type="int" Nullable="false" />
+          <Property Name="Discount" Type="int" Nullable="false" />
+          <Property Name="QuantityInStock" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Photo" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_PrkOrderDetails_PrkOrders">
+          <End Role="PrkOrders" Type="Self.PrkOrders" Multiplicity="1" />
+          <End Role="PrkOrderDetails" Type="Self.PrkOrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkOrders">
+              <PropertyRef Name="IdOrder" />
+            </Principal>
+            <Dependent Role="PrkOrderDetails">
+              <PropertyRef Name="IdOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrderDetails_PrlProducts">
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="1" />
+          <End Role="PrkOrderDetails" Type="Self.PrkOrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrlProducts">
+              <PropertyRef Name="IdProduct" />
+            </Principal>
+            <Dependent Role="PrkOrderDetails">
+              <PropertyRef Name="IdProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrders_PrkOrderStatuses">
+          <End Role="PrkOrderStatuses" Type="Self.PrkOrderStatuses" Multiplicity="1" />
+          <End Role="PrkOrders" Type="Self.PrkOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkOrderStatuses">
+              <PropertyRef Name="IdOrderStatus" />
+            </Principal>
+            <Dependent Role="PrkOrders">
+              <PropertyRef Name="IdOrderStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrders_PrkPickUpPoints">
+          <End Role="PrkPickUpPoints" Type="Self.PrkPickUpPoints" Multiplicity="1" />
+          <End Role="PrkOrders" Type="Self.PrkOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkPickUpPoints">
+              <PropertyRef Name="IdPickUpPoint" />
+            </Principal>
+            <Dependent Role="PrkOrders">
+              <PropertyRef Name="IdPickUpPoint" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrders_PrkUsers">
+          <End Role="PrkUsers" Type="Self.PrkUsers" Multiplicity="1" />
+          <End Role="PrkOrders" Type="Self.PrkOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkUsers">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="PrkOrders">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkUsers_PrkRoles">
+          <End Role="PrkRoles" Type="Self.PrkRoles" Multiplicity="1" />
+          <End Role="PrkUsers" Type="Self.PrkUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkRoles">
+              <PropertyRef Name="IdRole" />
+            </Principal>
+            <Dependent Role="PrkUsers">
+              <PropertyRef Name="IdRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrlProducts_PrkCategotyOrders">
+          <End Role="PrkCategotyOrders" Type="Self.PrkCategotyOrders" Multiplicity="1" />
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkCategotyOrders">
+              <PropertyRef Name="IdCategotyOrder" />
+            </Principal>
+            <Dependent Role="PrlProducts">
+              <PropertyRef Name="IdCategotyOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrlProducts_PrkManufacturers">
+          <End Role="PrkManufacturers" Type="Self.PrkManufacturers" Multiplicity="1" />
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkManufacturers">
+              <PropertyRef Name="IdManufacturer" />
+            </Principal>
+            <Dependent Role="PrlProducts">
+              <PropertyRef Name="IdManufacturer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrlProducts_PrkSuppliers">
+          <End Role="PrkSuppliers" Type="Self.PrkSuppliers" Multiplicity="1" />
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkSuppliers">
+              <PropertyRef Name="IdSupplier" />
+            </Principal>
+            <Dependent Role="PrlProducts">
+              <PropertyRef Name="IdSupplier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrlProducts_PrkUunitOfMeasurements">
+          <End Role="PrkUunitOfMeasurements" Type="Self.PrkUunitOfMeasurements" Multiplicity="1" />
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkUunitOfMeasurements">
+              <PropertyRef Name="IdUnitOfMeasurement" />
+            </Principal>
+            <Dependent Role="PrlProducts">
+              <PropertyRef Name="IdUnitOfMeasurements" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище user36124ModelContainer">
+          <EntitySet Name="PrkCategotyOrders" EntityType="Self.PrkCategotyOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkManufacturers" EntityType="Self.PrkManufacturers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkOrderDetails" EntityType="Self.PrkOrderDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkOrders" EntityType="Self.PrkOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkOrderStatuses" EntityType="Self.PrkOrderStatuses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkPickUpPoints" EntityType="Self.PrkPickUpPoints" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkRoles" EntityType="Self.PrkRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkSuppliers" EntityType="Self.PrkSuppliers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkUsers" EntityType="Self.PrkUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrkUunitOfMeasurements" EntityType="Self.PrkUunitOfMeasurements" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrlProducts" EntityType="Self.PrlProducts" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_PrkOrderDetails_PrkOrders" Association="Self.FK_PrkOrderDetails_PrkOrders">
+            <End Role="PrkOrders" EntitySet="PrkOrders" />
+            <End Role="PrkOrderDetails" EntitySet="PrkOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrderDetails_PrlProducts" Association="Self.FK_PrkOrderDetails_PrlProducts">
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+            <End Role="PrkOrderDetails" EntitySet="PrkOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrders_PrkOrderStatuses" Association="Self.FK_PrkOrders_PrkOrderStatuses">
+            <End Role="PrkOrderStatuses" EntitySet="PrkOrderStatuses" />
+            <End Role="PrkOrders" EntitySet="PrkOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrders_PrkPickUpPoints" Association="Self.FK_PrkOrders_PrkPickUpPoints">
+            <End Role="PrkPickUpPoints" EntitySet="PrkPickUpPoints" />
+            <End Role="PrkOrders" EntitySet="PrkOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrders_PrkUsers" Association="Self.FK_PrkOrders_PrkUsers">
+            <End Role="PrkUsers" EntitySet="PrkUsers" />
+            <End Role="PrkOrders" EntitySet="PrkOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkUsers_PrkRoles" Association="Self.FK_PrkUsers_PrkRoles">
+            <End Role="PrkRoles" EntitySet="PrkRoles" />
+            <End Role="PrkUsers" EntitySet="PrkUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrlProducts_PrkCategotyOrders" Association="Self.FK_PrlProducts_PrkCategotyOrders">
+            <End Role="PrkCategotyOrders" EntitySet="PrkCategotyOrders" />
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrlProducts_PrkManufacturers" Association="Self.FK_PrlProducts_PrkManufacturers">
+            <End Role="PrkManufacturers" EntitySet="PrkManufacturers" />
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrlProducts_PrkSuppliers" Association="Self.FK_PrlProducts_PrkSuppliers">
+            <End Role="PrkSuppliers" EntitySet="PrkSuppliers" />
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrlProducts_PrkUunitOfMeasurements" Association="Self.FK_PrlProducts_PrkUunitOfMeasurements">
+            <End Role="PrkUunitOfMeasurements" EntitySet="PrkUunitOfMeasurements" />
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="user36124Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PrkCategotyOrders">
+          <Key>
+            <PropertyRef Name="IdCategotyOrder" />
+          </Key>
+          <Property Name="IdCategotyOrder" Type="Int32" Nullable="false" />
+          <Property Name="CategotyOrder" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrlProducts" Relationship="Self.FK_PrlProducts_PrkCategotyOrders" FromRole="PrkCategotyOrders" ToRole="PrlProducts" />
+        </EntityType>
+        <EntityType Name="PrkManufacturers">
+          <Key>
+            <PropertyRef Name="IdManufacturer" />
+          </Key>
+          <Property Name="IdManufacturer" Type="Int32" Nullable="false" />
+          <Property Name="Manufacturer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrlProducts" Relationship="Self.FK_PrlProducts_PrkManufacturers" FromRole="PrkManufacturers" ToRole="PrlProducts" />
+        </EntityType>
+        <EntityType Name="PrkOrderDetails">
+          <Key>
+            <PropertyRef Name="IdOrderDetail" />
+          </Key>
+          <Property Name="IdOrderDetail" Type="Int32" Nullable="false" />
+          <Property Name="IdProduct" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="IdOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PrkOrders" Relationship="Self.FK_PrkOrderDetails_PrkOrders" FromRole="PrkOrderDetails" ToRole="PrkOrders" />
+          <NavigationProperty Name="PrlProducts" Relationship="Self.FK_PrkOrderDetails_PrlProducts" FromRole="PrkOrderDetails" ToRole="PrlProducts" />
+        </EntityType>
+        <EntityType Name="PrkOrders">
+          <Key>
+            <PropertyRef Name="IdOrder" />
+          </Key>
+          <Property Name="IdOrder" Type="Int32" Nullable="false" />
+          <Property Name="IdPickUpPoint" Type="Int32" Nullable="false" />
+          <Property Name="IdUser" Type="Int32" Nullable="false" />
+          <Property Name="IdOrderStatus" Type="Int32" Nullable="false" />
+          <Property Name="DateOrder" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateDelivery" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CodeOrder" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrkOrderDetails" Relationship="Self.FK_PrkOrderDetails_PrkOrders" FromRole="PrkOrders" ToRole="PrkOrderDetails" />
+          <NavigationProperty Name="PrkOrderStatuses" Relationship="Self.FK_PrkOrders_PrkOrderStatuses" FromRole="PrkOrders" ToRole="PrkOrderStatuses" />
+          <NavigationProperty Name="PrkPickUpPoints" Relationship="Self.FK_PrkOrders_PrkPickUpPoints" FromRole="PrkOrders" ToRole="PrkPickUpPoints" />
+          <NavigationProperty Name="PrkUsers" Relationship="Self.FK_PrkOrders_PrkUsers" FromRole="PrkOrders" ToRole="PrkUsers" />
+        </EntityType>
+        <EntityType Name="PrkOrderStatuses">
+          <Key>
+            <PropertyRef Name="IdOrderStatus" />
+          </Key>
+          <Property Name="IdOrderStatus" Type="Int32" Nullable="false" />
+          <Property Name="OrderStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrkOrders" Relationship="Self.FK_PrkOrders_PrkOrderStatuses" FromRole="PrkOrderStatuses" ToRole="PrkOrders" />
+        </EntityType>
+        <EntityType Name="PrkPickUpPoints">
+          <Key>
+            <PropertyRef Name="IdPickUpPoint" />
+          </Key>
+          <Property Name="IdPickUpPoint" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Street" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Home" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrkOrders" Relationship="Self.FK_PrkOrders_PrkPickUpPoints" FromRole="PrkPickUpPoints" ToRole="PrkOrders" />
+        </EntityType>
+        <EntityType Name="PrkRoles">
+          <Key>
+            <PropertyRef Name="IdRole" />
+          </Key>
+          <Property Name="IdRole" Type="Int32" Nullable="false" />
+          <Property Name="Role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrkUsers" Relationship="Self.FK_PrkUsers_PrkRoles" FromRole="PrkRoles" ToRole="PrkUsers" />
+        </EntityType>
+        <EntityType Name="PrkSuppliers">
+          <Key>
+            <PropertyRef Name="IdSupplier" />
+          </Key>
+          <Property Name="IdSupplier" Type="Int32" Nullable="false" />
+          <Property Name="Supplier" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrlProducts" Relationship="Self.FK_PrlProducts_PrkSuppliers" FromRole="PrkSuppliers" ToRole="PrlProducts" />
+        </EntityType>
+        <EntityType Name="PrkUsers">
+          <Key>
+            <PropertyRef Name="IdUser" />
+          </Key>
+          <Property Name="IdUser" Type="Int32" Nullable="false" />
+          <Property Name="IdRole" Type="Int32" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Login" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrkOrders" Relationship="Self.FK_PrkOrders_PrkUsers" FromRole="PrkUsers" ToRole="PrkOrders" />
+          <NavigationProperty Name="PrkRoles" Relationship="Self.FK_PrkUsers_PrkRoles" FromRole="PrkUsers" ToRole="PrkRoles" />
+        </EntityType>
+        <EntityType Name="PrkUunitOfMeasurements">
+          <Key>
+            <PropertyRef Name="IdUnitOfMeasurement" />
+          </Key>
+          <Property Name="IdUnitOfMeasurement" Type="Int32" Nullable="false" />
+          <Property Name="UnitOfMeasurement" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="PrlProducts" Relationship="Self.FK_PrlProducts_PrkUunitOfMeasurements" FromRole="PrkUunitOfMeasurements" ToRole="PrlProducts" />
+        </EntityType>
+        <EntityType Name="PrlProducts">
+          <Key>
+            <PropertyRef Name="IdProduct" />
+          </Key>
+          <Property Name="IdProduct" Type="Int32" Nullable="false" />
+          <Property Name="IdUnitOfMeasurements" Type="Int32" Nullable="false" />
+          <Property Name="IdSupplier" Type="Int32" Nullable="false" />
+          <Property Name="IdManufacturer" Type="Int32" Nullable="false" />
+          <Property Name="IdCategotyOrder" Type="Int32" Nullable="false" />
+          <Property Name="Article" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="NameOrder" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Price" Type="Int32" Nullable="false" />
+          <Property Name="Discount" Type="Int32" Nullable="false" />
+          <Property Name="QuantityInStock" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="PrkCategotyOrders" Relationship="Self.FK_PrlProducts_PrkCategotyOrders" FromRole="PrlProducts" ToRole="PrkCategotyOrders" />
+          <NavigationProperty Name="PrkManufacturers" Relationship="Self.FK_PrlProducts_PrkManufacturers" FromRole="PrlProducts" ToRole="PrkManufacturers" />
+          <NavigationProperty Name="PrkOrderDetails" Relationship="Self.FK_PrkOrderDetails_PrlProducts" FromRole="PrlProducts" ToRole="PrkOrderDetails" />
+          <NavigationProperty Name="PrkSuppliers" Relationship="Self.FK_PrlProducts_PrkSuppliers" FromRole="PrlProducts" ToRole="PrkSuppliers" />
+          <NavigationProperty Name="PrkUunitOfMeasurements" Relationship="Self.FK_PrlProducts_PrkUunitOfMeasurements" FromRole="PrlProducts" ToRole="PrkUunitOfMeasurements" />
+        </EntityType>
+        <Association Name="FK_PrlProducts_PrkCategotyOrders">
+          <End Role="PrkCategotyOrders" Type="Self.PrkCategotyOrders" Multiplicity="1" />
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkCategotyOrders">
+              <PropertyRef Name="IdCategotyOrder" />
+            </Principal>
+            <Dependent Role="PrlProducts">
+              <PropertyRef Name="IdCategotyOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrlProducts_PrkManufacturers">
+          <End Role="PrkManufacturers" Type="Self.PrkManufacturers" Multiplicity="1" />
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkManufacturers">
+              <PropertyRef Name="IdManufacturer" />
+            </Principal>
+            <Dependent Role="PrlProducts">
+              <PropertyRef Name="IdManufacturer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrderDetails_PrkOrders">
+          <End Role="PrkOrders" Type="Self.PrkOrders" Multiplicity="1" />
+          <End Role="PrkOrderDetails" Type="Self.PrkOrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkOrders">
+              <PropertyRef Name="IdOrder" />
+            </Principal>
+            <Dependent Role="PrkOrderDetails">
+              <PropertyRef Name="IdOrder" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrderDetails_PrlProducts">
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="1" />
+          <End Role="PrkOrderDetails" Type="Self.PrkOrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrlProducts">
+              <PropertyRef Name="IdProduct" />
+            </Principal>
+            <Dependent Role="PrkOrderDetails">
+              <PropertyRef Name="IdProduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrders_PrkOrderStatuses">
+          <End Role="PrkOrderStatuses" Type="Self.PrkOrderStatuses" Multiplicity="1" />
+          <End Role="PrkOrders" Type="Self.PrkOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkOrderStatuses">
+              <PropertyRef Name="IdOrderStatus" />
+            </Principal>
+            <Dependent Role="PrkOrders">
+              <PropertyRef Name="IdOrderStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrders_PrkPickUpPoints">
+          <End Role="PrkPickUpPoints" Type="Self.PrkPickUpPoints" Multiplicity="1" />
+          <End Role="PrkOrders" Type="Self.PrkOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkPickUpPoints">
+              <PropertyRef Name="IdPickUpPoint" />
+            </Principal>
+            <Dependent Role="PrkOrders">
+              <PropertyRef Name="IdPickUpPoint" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkOrders_PrkUsers">
+          <End Role="PrkUsers" Type="Self.PrkUsers" Multiplicity="1" />
+          <End Role="PrkOrders" Type="Self.PrkOrders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkUsers">
+              <PropertyRef Name="IdUser" />
+            </Principal>
+            <Dependent Role="PrkOrders">
+              <PropertyRef Name="IdUser" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrkUsers_PrkRoles">
+          <End Role="PrkRoles" Type="Self.PrkRoles" Multiplicity="1" />
+          <End Role="PrkUsers" Type="Self.PrkUsers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkRoles">
+              <PropertyRef Name="IdRole" />
+            </Principal>
+            <Dependent Role="PrkUsers">
+              <PropertyRef Name="IdRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrlProducts_PrkSuppliers">
+          <End Role="PrkSuppliers" Type="Self.PrkSuppliers" Multiplicity="1" />
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkSuppliers">
+              <PropertyRef Name="IdSupplier" />
+            </Principal>
+            <Dependent Role="PrlProducts">
+              <PropertyRef Name="IdSupplier" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrlProducts_PrkUunitOfMeasurements">
+          <End Role="PrkUunitOfMeasurements" Type="Self.PrkUunitOfMeasurements" Multiplicity="1" />
+          <End Role="PrlProducts" Type="Self.PrlProducts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PrkUunitOfMeasurements">
+              <PropertyRef Name="IdUnitOfMeasurement" />
+            </Principal>
+            <Dependent Role="PrlProducts">
+              <PropertyRef Name="IdUnitOfMeasurements" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PrkCategotyOrders" EntityType="Self.PrkCategotyOrders" />
+          <EntitySet Name="PrkManufacturers" EntityType="Self.PrkManufacturers" />
+          <EntitySet Name="PrkOrderDetails" EntityType="Self.PrkOrderDetails" />
+          <EntitySet Name="PrkOrders" EntityType="Self.PrkOrders" />
+          <EntitySet Name="PrkOrderStatuses" EntityType="Self.PrkOrderStatuses" />
+          <EntitySet Name="PrkPickUpPoints" EntityType="Self.PrkPickUpPoints" />
+          <EntitySet Name="PrkRoles" EntityType="Self.PrkRoles" />
+          <EntitySet Name="PrkSuppliers" EntityType="Self.PrkSuppliers" />
+          <EntitySet Name="PrkUsers" EntityType="Self.PrkUsers" />
+          <EntitySet Name="PrkUunitOfMeasurements" EntityType="Self.PrkUunitOfMeasurements" />
+          <EntitySet Name="PrlProducts" EntityType="Self.PrlProducts" />
+          <AssociationSet Name="FK_PrlProducts_PrkCategotyOrders" Association="Self.FK_PrlProducts_PrkCategotyOrders">
+            <End Role="PrkCategotyOrders" EntitySet="PrkCategotyOrders" />
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrlProducts_PrkManufacturers" Association="Self.FK_PrlProducts_PrkManufacturers">
+            <End Role="PrkManufacturers" EntitySet="PrkManufacturers" />
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrderDetails_PrkOrders" Association="Self.FK_PrkOrderDetails_PrkOrders">
+            <End Role="PrkOrders" EntitySet="PrkOrders" />
+            <End Role="PrkOrderDetails" EntitySet="PrkOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrderDetails_PrlProducts" Association="Self.FK_PrkOrderDetails_PrlProducts">
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+            <End Role="PrkOrderDetails" EntitySet="PrkOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrders_PrkOrderStatuses" Association="Self.FK_PrkOrders_PrkOrderStatuses">
+            <End Role="PrkOrderStatuses" EntitySet="PrkOrderStatuses" />
+            <End Role="PrkOrders" EntitySet="PrkOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrders_PrkPickUpPoints" Association="Self.FK_PrkOrders_PrkPickUpPoints">
+            <End Role="PrkPickUpPoints" EntitySet="PrkPickUpPoints" />
+            <End Role="PrkOrders" EntitySet="PrkOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkOrders_PrkUsers" Association="Self.FK_PrkOrders_PrkUsers">
+            <End Role="PrkUsers" EntitySet="PrkUsers" />
+            <End Role="PrkOrders" EntitySet="PrkOrders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrkUsers_PrkRoles" Association="Self.FK_PrkUsers_PrkRoles">
+            <End Role="PrkRoles" EntitySet="PrkRoles" />
+            <End Role="PrkUsers" EntitySet="PrkUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrlProducts_PrkSuppliers" Association="Self.FK_PrlProducts_PrkSuppliers">
+            <End Role="PrkSuppliers" EntitySet="PrkSuppliers" />
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrlProducts_PrkUunitOfMeasurements" Association="Self.FK_PrlProducts_PrkUunitOfMeasurements">
+            <End Role="PrkUunitOfMeasurements" EntitySet="PrkUunitOfMeasurements" />
+            <End Role="PrlProducts" EntitySet="PrlProducts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище user36124ModelContainer" CdmEntityContainer="DBEntities">
+          <EntitySetMapping Name="PrkCategotyOrders">
+            <EntityTypeMapping TypeName="user36124Model.PrkCategotyOrders">
+              <MappingFragment StoreEntitySet="PrkCategotyOrders">
+                <ScalarProperty Name="IdCategotyOrder" ColumnName="IdCategotyOrder" />
+                <ScalarProperty Name="CategotyOrder" ColumnName="CategotyOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkManufacturers">
+            <EntityTypeMapping TypeName="user36124Model.PrkManufacturers">
+              <MappingFragment StoreEntitySet="PrkManufacturers">
+                <ScalarProperty Name="IdManufacturer" ColumnName="IdManufacturer" />
+                <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkOrderDetails">
+            <EntityTypeMapping TypeName="user36124Model.PrkOrderDetails">
+              <MappingFragment StoreEntitySet="PrkOrderDetails">
+                <ScalarProperty Name="IdOrderDetail" ColumnName="IdOrderDetail" />
+                <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkOrders">
+            <EntityTypeMapping TypeName="user36124Model.PrkOrders">
+              <MappingFragment StoreEntitySet="PrkOrders">
+                <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+                <ScalarProperty Name="IdPickUpPoint" ColumnName="IdPickUpPoint" />
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="IdOrderStatus" ColumnName="IdOrderStatus" />
+                <ScalarProperty Name="DateOrder" ColumnName="DateOrder" />
+                <ScalarProperty Name="DateDelivery" ColumnName="DateDelivery" />
+                <ScalarProperty Name="CodeOrder" ColumnName="CodeOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkOrderStatuses">
+            <EntityTypeMapping TypeName="user36124Model.PrkOrderStatuses">
+              <MappingFragment StoreEntitySet="PrkOrderStatuses">
+                <ScalarProperty Name="IdOrderStatus" ColumnName="IdOrderStatus" />
+                <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkPickUpPoints">
+            <EntityTypeMapping TypeName="user36124Model.PrkPickUpPoints">
+              <MappingFragment StoreEntitySet="PrkPickUpPoints">
+                <ScalarProperty Name="IdPickUpPoint" ColumnName="IdPickUpPoint" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="Home" ColumnName="Home" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkRoles">
+            <EntityTypeMapping TypeName="user36124Model.PrkRoles">
+              <MappingFragment StoreEntitySet="PrkRoles">
+                <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkSuppliers">
+            <EntityTypeMapping TypeName="user36124Model.PrkSuppliers">
+              <MappingFragment StoreEntitySet="PrkSuppliers">
+                <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+                <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkUsers">
+            <EntityTypeMapping TypeName="user36124Model.PrkUsers">
+              <MappingFragment StoreEntitySet="PrkUsers">
+                <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+                <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrkUunitOfMeasurements">
+            <EntityTypeMapping TypeName="user36124Model.PrkUunitOfMeasurements">
+              <MappingFragment StoreEntitySet="PrkUunitOfMeasurements">
+                <ScalarProperty Name="IdUnitOfMeasurement" ColumnName="IdUnitOfMeasurement" />
+                <ScalarProperty Name="UnitOfMeasurement" ColumnName="UnitOfMeasurement" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrlProducts">
+            <EntityTypeMapping TypeName="user36124Model.PrlProducts">
+              <MappingFragment StoreEntitySet="PrlProducts">
+                <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+                <ScalarProperty Name="IdUnitOfMeasurements" ColumnName="IdUnitOfMeasurements" />
+                <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+                <ScalarProperty Name="IdManufacturer" ColumnName="IdManufacturer" />
+                <ScalarProperty Name="IdCategotyOrder" ColumnName="IdCategotyOrder" />
+                <ScalarProperty Name="Article" ColumnName="Article" />
+                <ScalarProperty Name="NameOrder" ColumnName="NameOrder" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="QuantityInStock" ColumnName="QuantityInStock" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

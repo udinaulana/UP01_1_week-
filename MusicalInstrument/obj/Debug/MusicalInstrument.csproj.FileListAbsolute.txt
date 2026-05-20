@@ -1,0 +1,170 @@
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.csproj.AssemblyReference.cache
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.exe.config
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MainWindow.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\AdministratorPage.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\AuthorizationPage.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\ClientPage.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\GuestPage.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\ManagerPage.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Windows\OrderWindow.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\App.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument_Content.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument_MarkupCompile.cache
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument_MarkupCompile.lref
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\MusicalInstrument.exe.config
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\MusicalInstrument.exe
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\MusicalInstrument.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\EntityFramework.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.BarCodes.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Charting.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Cryptography.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Quality.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Shared.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Snippets.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.System.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.WPFonts.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Buffers.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Memory.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Security.Cryptography.Pkcs.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\EntityFramework.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.BarCodes.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.BarCodes.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Charting.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Charting.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Cryptography.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Cryptography.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Quality.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Quality.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Shared.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Shared.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.Snippets.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.System.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.System.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.WPFonts.pdb
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\PdfSharp.WPFonts.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Buffers.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Memory.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\App.baml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MainWindow.baml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\AdministratorPage.baml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\AuthorizationPage.baml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\ClientPage.baml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\GuestPage.baml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Pages\ManagerPage.baml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\Windows\OrderWindow.baml
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.g.resources
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.Properties.Resources.resources
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.csproj.GenerateResource.cache
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.csproj.CoreCompileInputs.cache
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalI.E49815E2.Up2Date
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.exe
+C:\Users\USER\OneDrive\Desktop\Ульяна, практика\MusicalInstrument\obj\Debug\MusicalInstrument.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.csproj.AssemblyReference.cache
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.csproj.SuggestedBindingRedirects.cache
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.exe.config
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MainWindow.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\AdministratorPage.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\AuthorizationPage.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\ClientPage.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\GuestPage.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\ManagerPage.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\CartWindow.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\OrdersListWindow.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\OrderWindow.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\StatusChangeDialog.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\App.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument_Content.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument_MarkupCompile.cache
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument_MarkupCompile.lref
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\MusicalInstrument.exe.config
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\MusicalInstrument.exe
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\MusicalInstrument.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\EntityFramework.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.BarCodes.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Charting.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Cryptography.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Quality.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Shared.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Snippets.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.System.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.WPFonts.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Buffers.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Memory.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Security.Cryptography.Pkcs.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\EntityFramework.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.BarCodes.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.BarCodes.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Charting.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Charting.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Cryptography.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Cryptography.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Quality.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Quality.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Shared.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Shared.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.Snippets.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.System.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.System.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.WPFonts.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\PdfSharp.WPFonts.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Buffers.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Memory.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Security.Cryptography.Pkcs.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\App.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MainWindow.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\AdministratorPage.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\AuthorizationPage.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\ClientPage.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\GuestPage.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Pages\ManagerPage.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\CartWindow.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\OrdersListWindow.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\OrderWindow.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\StatusChangeDialog.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.g.resources
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.Properties.Resources.resources
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.csproj.GenerateResource.cache
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.csproj.CoreCompileInputs.cache
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalI.E49815E2.Up2Date
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.exe
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\MusicalInstrument.pdb
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\ProductEditWindow.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\ProductEditWindow.baml
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\OrderDetailsWindow.g.cs
+C:\Users\YUdina_UM\Desktop\MusicalInstrument\пр\MusicalInstrument\obj\Debug\Windows\OrderDetailsWindow.baml

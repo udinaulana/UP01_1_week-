@@ -1,0 +1,156 @@
+﻿<Window x:Class="MusicalInstrument.Windows.CartWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicalInstrument.Windows"
+        xmlns:convert="clr-namespace:MusicalInstrument.Converters"
+        mc:Ignorable="d"
+        Title="Корзина" Height="550" Width="850"
+        WindowStartupLocation="CenterOwner"
+        Background="#F8F8FF"
+        FontFamily="Times New Roman">
+
+    <Window.Resources>
+        <convert:DiscountPrice x:Key="DiscountPrice"/>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <Border Grid.Row="0" Background="#483D8B" Padding="15">
+            <TextBlock Name="FIOBlock" Text="Фамилия Имя Отчество" 
+                       FontSize="20" FontWeight="Bold" Foreground="White" 
+                       HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Список товаров с карточками -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <ItemsControl Name="CartList" Margin="10">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#483D8B" BorderThickness="2" CornerRadius="10" 
+                                Margin="5,5,5,5" Padding="10" Background="White">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Фото товара -->
+                                <Image Source="{Binding PrlProducts.Photo}" Width="100" Height="120" 
+                                       Stretch="Uniform" Grid.Column="0" Margin="5"/>
+
+                                <!-- Информация о товаре -->
+                                <StackPanel Grid.Column="1" Margin="10,0">
+                                    <!-- Категория и название -->
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding PrlProducts.PrkCategotyOrders.CategotyOrder}" 
+                                                   FontWeight="Bold" FontSize="14" Foreground="#483D8B"/>
+                                        <TextBlock Text=" | " FontWeight="Bold" FontSize="14" Foreground="#483D8B"/>
+                                        <TextBlock Text="{Binding PrlProducts.NameOrder}" 
+                                                   FontWeight="Bold" FontSize="14" Foreground="#483D8B"/>
+                                    </StackPanel>
+
+                                    <!-- Артикул -->
+                                    <TextBlock FontSize="12" Margin="0,5,0,0">
+                                        <Run Text="Артикул: " FontWeight="Bold"/>
+                                        <Run Text="{Binding PrlProducts.Article}"/>
+                                    </TextBlock>
+
+                                    <!-- Описание -->
+                                    <TextBlock FontSize="12" TextWrapping="Wrap">
+                                        <Run Text="Описание: " FontWeight="Bold"/>
+                                        <Run Text="{Binding PrlProducts.Description}"/>
+                                    </TextBlock>
+
+                                    <!-- Производитель -->
+                                    <TextBlock FontSize="12">
+                                        <Run Text="Производитель: " FontWeight="Bold"/>
+                                        <Run Text="{Binding PrlProducts.PrkManufacturers.Manufacturer}"/>
+                                    </TextBlock>
+
+                                    <!-- Поставщик -->
+                                    <TextBlock FontSize="12">
+                                        <Run Text="Поставщик: " FontWeight="Bold"/>
+                                        <Run Text="{Binding PrlProducts.PrkSuppliers.Supplier}"/>
+                                    </TextBlock>
+
+                                    <!-- Единица измерения -->
+                                    <TextBlock FontSize="12">
+                                        <Run Text="Единица измерения: " FontWeight="Bold"/>
+                                        <Run Text="{Binding PrlProducts.PrkUunitOfMeasurements.UnitOfMeasurement}"/>
+                                    </TextBlock>
+
+                                    <!-- Цена -->
+                                    <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                        <TextBlock Text="Цена: " FontWeight="Bold" FontSize="13"/>
+                                        <TextBlock Text="{Binding PrlProducts.Price}" FontSize="13" 
+                                                   Foreground="Red" TextDecorations="Strikethrough"/>
+                                        <TextBlock Text=" руб." FontSize="13" Foreground="Red" TextDecorations="Strikethrough"/>
+                                        <TextBlock Margin="5,0,0,0" FontSize="13" FontWeight="Bold" Foreground="#9400D3">
+                                            <TextBlock.Text>
+                                                <MultiBinding Converter="{StaticResource DiscountPrice}">
+                                                    <Binding Path="PrlProducts.Price"/>
+                                                    <Binding Path="PrlProducts.Discount"/>
+                                                </MultiBinding>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <!-- Количество и удаление -->
+                                <StackPanel Grid.Column="2" VerticalAlignment="Center" Margin="10,0">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                        <Button Content="-" Width="35" Height="30" 
+                                                Background="#9400D3" Foreground="White" FontWeight="Bold"
+                                                FontSize="16" Click="Decrease_Click" Tag="{Binding}"/>
+                                        <TextBlock Text="{Binding Quantity}" Width="45" TextAlignment="Center" 
+                                                   FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+                                        <Button Content="+" Width="35" Height="30" 
+                                                Background="#9400D3" Foreground="White" FontWeight="Bold"
+                                                FontSize="16" Click="Increase_Click" Tag="{Binding}"/>
+                                    </StackPanel>
+                                    <Button Content="Удалить" Background="#B8860B" Foreground="White" 
+                                            Width="100" Height="30" Click="Remove_Click" Tag="{Binding}"
+                                            FontWeight="Bold" Margin="0,10,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <!-- Итого и кнопки -->
+        <Border Grid.Row="2" Background="#483D8B" Padding="15">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Name="TotalOriginalBlock" Text="Сумма: 0 руб." FontSize="14" Foreground="White"/>
+                    <TextBlock Name="DiscountBlock" Text="Скидка: 0 руб." FontSize="14" Foreground="#FFD700"/>
+                    <TextBlock Name="TotalBlock" Text="Итого: 0 руб." FontSize="20" FontWeight="Bold" Foreground="#FFD700"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Content="Продолжить покупки" Width="160" Height="40" FontSize="14" 
+                            Background="#9400D3" Foreground="White" FontWeight="Bold" Cursor="Hand"
+                            Click="Continue_Click" Margin="5"/>
+                    <Button Content="Оформить заказ" Width="160" Height="40" FontSize="14" 
+                            Background="#9400D3" Foreground="White" FontWeight="Bold" Cursor="Hand"
+                            Click="Checkout_Click" Margin="5"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

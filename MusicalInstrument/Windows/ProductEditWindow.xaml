@@ -1,0 +1,120 @@
+﻿<Window x:Class="MusicalInstrument.Windows.ProductEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicalInstrument.Windows"
+        mc:Ignorable="d"
+         Title="Редактирование товара" Height="650" Width="550"
+        WindowStartupLocation="CenterOwner"
+        Background="#F8F8FF"
+        FontFamily="Times New Roman"
+        ResizeMode="NoResize">
+
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Заголовок -->
+        <Border Grid.Row="0" Background="#483D8B" CornerRadius="8" Padding="10" Margin="0,0,0,15">
+            <TextBlock Name="TitleBlock" Text="Добавление товара" 
+                       FontSize="18" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+        </Border>
+
+        <!-- Форма -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="0,0,0,15">
+
+                <!-- ID (только для чтения при редактировании) -->
+                <StackPanel Name="IdPanel" Visibility="Collapsed" Margin="0,0,0,10">
+                    <TextBlock Text="ID товара" FontWeight="Bold" Foreground="#483D8B" FontSize="14"/>
+                    <TextBox Name="IdBox" IsReadOnly="True" Background="#F0F0F0" Height="30" FontSize="14"/>
+                </StackPanel>
+
+                <!-- Фото товара -->
+                <TextBlock Text="Фото товара" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <Grid Margin="0,0,0,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Заглушка или фото -->
+                    <Border Grid.Column="0" Width="120" Height="120" BorderBrush="#483D8B" BorderThickness="1" 
+                            Background="#F0F0FF" CornerRadius="5">
+                        <Image Name="PhotoImage" Width="120" Height="120" Stretch="Uniform" 
+                               Source="/Images/picture.png"/>
+                    </Border>
+
+                    <StackPanel Grid.Column="1" Margin="15,0,0,0" VerticalAlignment="Center">
+                        <Button Name="LoadPhotoButton" Content="Загрузить фото" 
+                                Background="#9400D3" Foreground="White" FontWeight="Bold"
+                                Width="120" Height="35" Click="LoadPhotoButton_Click" Cursor="Hand"/>
+                        <Button Name="ClearPhotoButton" Content="Очистить" 
+                                Background="#B8860B" Foreground="White" FontWeight="Bold"
+                                Width="120" Height="35" Margin="0,10,0,0" 
+                                Click="ClearPhotoButton_Click" Cursor="Hand"/>
+                    </StackPanel>
+                </Grid>
+
+                <!-- Наименование -->
+                <TextBlock Text="Наименование товара" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <TextBox Name="NameBox" Height="35" Margin="0,0,0,15" FontSize="14"/>
+
+                <!-- Категория -->
+                <TextBlock Text="Категория" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <ComboBox Name="CategoryBox" Height="35" Margin="0,0,0,15" FontSize="14"
+                          DisplayMemberPath="CategotyOrder" SelectedValuePath="IdCategotyOrder"/>
+
+                <!-- Описание -->
+                <TextBlock Text="Описание" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <TextBox Name="DescriptionBox" Height="80" TextWrapping="Wrap" 
+                         Margin="0,0,0,15" AcceptsReturn="True" FontSize="14"/>
+
+                <!-- Производитель -->
+                <TextBlock Text="Производитель" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <ComboBox Name="ManufacturerBox" Height="35" Margin="0,0,0,15" FontSize="14"
+                          DisplayMemberPath="Manufacturer" SelectedValuePath="IdManufacturer"/>
+
+                <!-- Поставщик -->
+                <TextBlock Text="Поставщик" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <ComboBox Name="SupplierBox" Height="35" Margin="0,0,0,15" FontSize="14"
+                          DisplayMemberPath="Supplier" SelectedValuePath="IdSupplier"/>
+
+                <!-- Цена -->
+                <TextBlock Text="Цена (руб.)" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <TextBox Name="PriceBox" Height="35" Margin="0,0,0,15" FontSize="14"/>
+
+                <!-- Единица измерения -->
+                <TextBlock Text="Единица измерения" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <ComboBox Name="UnitBox" Height="35" Margin="0,0,0,15" FontSize="14"
+                          DisplayMemberPath="UnitOfMeasurement" SelectedValuePath="IdUnitOfMeasurement"/>
+
+                <!-- Количество -->
+                <TextBlock Text="Количество на складе" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <TextBox Name="QuantityBox" Height="35" Margin="0,0,0,15" FontSize="14"/>
+
+                <!-- Скидка -->
+                <TextBlock Text="Скидка (%)" FontWeight="Bold" Foreground="#483D8B" FontSize="14" Margin="0,0,0,5"/>
+                <TextBox Name="DiscountBox" Height="35" Margin="0,0,0,15" FontSize="14"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Кнопки -->
+        <Border Grid.Row="2" Background="#F0F0FF" CornerRadius="8" Padding="10" Margin="0,15,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="SaveButton" Content="Сохранить" 
+                        Background="#9400D3" Foreground="White" FontWeight="Bold"
+                        Width="120" Height="40" FontSize="14" 
+                        Click="SaveButton_Click" Cursor="Hand" Margin="10"/>
+                <Button Name="CancelButton" Content="Отмена" 
+                        Background="#B8860B" Foreground="White" FontWeight="Bold"
+                        Width="120" Height="40" FontSize="14" 
+                        Click="CancelButton_Click" Cursor="Hand" Margin="10"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

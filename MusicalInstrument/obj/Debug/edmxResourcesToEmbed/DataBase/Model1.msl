@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище user36124ModelContainer" CdmEntityContainer="DBEntities">
+    <EntitySetMapping Name="PrkCategotyOrders">
+      <EntityTypeMapping TypeName="user36124Model.PrkCategotyOrders">
+        <MappingFragment StoreEntitySet="PrkCategotyOrders">
+          <ScalarProperty Name="IdCategotyOrder" ColumnName="IdCategotyOrder" />
+          <ScalarProperty Name="CategotyOrder" ColumnName="CategotyOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkManufacturers">
+      <EntityTypeMapping TypeName="user36124Model.PrkManufacturers">
+        <MappingFragment StoreEntitySet="PrkManufacturers">
+          <ScalarProperty Name="IdManufacturer" ColumnName="IdManufacturer" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkOrderDetails">
+      <EntityTypeMapping TypeName="user36124Model.PrkOrderDetails">
+        <MappingFragment StoreEntitySet="PrkOrderDetails">
+          <ScalarProperty Name="IdOrderDetail" ColumnName="IdOrderDetail" />
+          <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkOrders">
+      <EntityTypeMapping TypeName="user36124Model.PrkOrders">
+        <MappingFragment StoreEntitySet="PrkOrders">
+          <ScalarProperty Name="IdOrder" ColumnName="IdOrder" />
+          <ScalarProperty Name="IdPickUpPoint" ColumnName="IdPickUpPoint" />
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdOrderStatus" ColumnName="IdOrderStatus" />
+          <ScalarProperty Name="DateOrder" ColumnName="DateOrder" />
+          <ScalarProperty Name="DateDelivery" ColumnName="DateDelivery" />
+          <ScalarProperty Name="CodeOrder" ColumnName="CodeOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkOrderStatuses">
+      <EntityTypeMapping TypeName="user36124Model.PrkOrderStatuses">
+        <MappingFragment StoreEntitySet="PrkOrderStatuses">
+          <ScalarProperty Name="IdOrderStatus" ColumnName="IdOrderStatus" />
+          <ScalarProperty Name="OrderStatus" ColumnName="OrderStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkPickUpPoints">
+      <EntityTypeMapping TypeName="user36124Model.PrkPickUpPoints">
+        <MappingFragment StoreEntitySet="PrkPickUpPoints">
+          <ScalarProperty Name="IdPickUpPoint" ColumnName="IdPickUpPoint" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Home" ColumnName="Home" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkRoles">
+      <EntityTypeMapping TypeName="user36124Model.PrkRoles">
+        <MappingFragment StoreEntitySet="PrkRoles">
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkSuppliers">
+      <EntityTypeMapping TypeName="user36124Model.PrkSuppliers">
+        <MappingFragment StoreEntitySet="PrkSuppliers">
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="Supplier" ColumnName="Supplier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkUsers">
+      <EntityTypeMapping TypeName="user36124Model.PrkUsers">
+        <MappingFragment StoreEntitySet="PrkUsers">
+          <ScalarProperty Name="IdUser" ColumnName="IdUser" />
+          <ScalarProperty Name="IdRole" ColumnName="IdRole" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrkUunitOfMeasurements">
+      <EntityTypeMapping TypeName="user36124Model.PrkUunitOfMeasurements">
+        <MappingFragment StoreEntitySet="PrkUunitOfMeasurements">
+          <ScalarProperty Name="IdUnitOfMeasurement" ColumnName="IdUnitOfMeasurement" />
+          <ScalarProperty Name="UnitOfMeasurement" ColumnName="UnitOfMeasurement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrlProducts">
+      <EntityTypeMapping TypeName="user36124Model.PrlProducts">
+        <MappingFragment StoreEntitySet="PrlProducts">
+          <ScalarProperty Name="IdProduct" ColumnName="IdProduct" />
+          <ScalarProperty Name="IdUnitOfMeasurements" ColumnName="IdUnitOfMeasurements" />
+          <ScalarProperty Name="IdSupplier" ColumnName="IdSupplier" />
+          <ScalarProperty Name="IdManufacturer" ColumnName="IdManufacturer" />
+          <ScalarProperty Name="IdCategotyOrder" ColumnName="IdCategotyOrder" />
+          <ScalarProperty Name="Article" ColumnName="Article" />
+          <ScalarProperty Name="NameOrder" ColumnName="NameOrder" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="QuantityInStock" ColumnName="QuantityInStock" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
