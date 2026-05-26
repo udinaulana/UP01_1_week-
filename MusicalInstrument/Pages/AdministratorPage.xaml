@@ -241,7 +241,7 @@
                 <!-- Кнопка "Детали заказов" -->
                 <Button Name="ordersButton" Grid.Column="1" 
                 Content="Детали заказов" 
-                Background="#20B2AA" Foreground="White" FontWeight="Bold"
+                Background="#9400D3" Foreground="White" FontWeight="Bold"
                 FontSize="14" Width="160" Height="45" 
                 Click="ordersButton_Click" Cursor="Hand" Margin="5,0"/>
 
